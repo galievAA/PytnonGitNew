@@ -1,3 +1,4 @@
+from importlib.resources import path
 from multiprocessing.sharedctypes import Value
 
                                    # АРИФМИТИЧЕСКИЕ ОПЕРАЦИИ 
@@ -90,14 +91,121 @@ from multiprocessing.sharedctypes import Value
 
                                        # ФУНКЦИИ
 
-def f(x):
-    if x == 1:
-        return 'Целое'
-    elif x == 2.3:
-        return 23
-    else:
-        return
+# def f(x):
+#     if x == 1:
+#         return 'Целое'
+#     elif x == 2.3:
+#         return 23
+#     else:
+#         return
 
-arg = 1
-print(f(arg))
-print(type(f(arg)))
+# arg = 1
+# print(f(arg))
+# print(type(f(arg)))
+
+                                         #ЛЕКЦИЯ 2 данные функции и модули
+                                         # первый вариант
+# colors = ['red', 'green', 'blue']
+# data = open('file.txt', 'w') # ('file.txt' - путь к файлу, 'a' - мод )
+# data.writelines(colors) # разделителей не будет
+# data.write( '\n LINE 1\n')
+# data.write( 'LINE 2\n')
+# data.close()
+                                        # второй вариант
+
+
+# with open('file.txt', 'w') as data:
+#     data.write('lene 1\n')
+#     data.write('lene 2\n')
+                                        # Третий вариант
+
+# # path = 'file.txt'
+# # data = open(path, 'r')
+# # for line in data:
+# #     print(line)
+# # data.close()
+# exit()
+                                        # ФУНКЦИИ импорт
+# import hello as h
+# print(h.f(1))
+
+                                        # ФУНЦИИ умножения строк
+
+# def new_string(symbol, count = 3):
+#     return symbol * count
+
+# print(new_string('!', 5))   # ! ! ! ! !
+# print(new_string('!'))    # ! ! ! 
+# print(new_string('4'))    # 12
+
+                                        # функция 
+
+# def concatenatio (*params):
+#     res: str = ""
+#     for item in params:
+#         res += item
+#     return res
+
+# print(concatenatio('a', 's', 'd', 'w')) # asdw
+# print(concatenatio('a', '1', 'd', '2')) # a1d2
+# print(concatenatio('1', '2', '3', '4')) # TypeError: .....
+
+
+                                        # РЕКУРСИЯ 
+
+# def fib(n):
+#     if n in [1, 2]:
+#         return 1
+#     else:
+#         return fib (n-1) + fib(n-2)
+
+# list = []
+# for e in range (1, 10):
+#     list.append(fib(e))
+# print(list) # 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+                                        # КОРТЕЖИ - не изменяемый список
+
+# a = (3, 4)
+# print(a)
+# print(a[0])
+
+                                        # СЛОВАРИ
+
+
+# dictionary = {}
+# dictionary = \
+# {
+#     'up': 'верх',
+#     'left': 'лево',
+#     'down': 'вниз',
+#     'right': 'право'
+# }
+# print(dictionary) # 'up': 'верх','left': 'лево','down': 'вниз','right': 'право'
+# print(dictionary['left']) 
+
+                        # обращение ключи (up left down right)
+# for k in dictionary.keys():
+#     print(k)
+                        # обращение к значению (верх лево вниз право)
+# for k in dictionary.values():
+#      print(k)
+
+                                        # Списки
+# list1 = [1,2,3,4,5]
+# list2 = list1
+# print(list1.pop()) - удаление элимента
+# print(list1.insert()) - вставить элимента
+# print(list1.append()) - добавление в конец
+# for e in list1:
+#     print(e)
+
+# print()
+
+
+# for e in list2:
+#     print(e)
+
+
+
+
